@@ -1,8 +1,11 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
 import About from "./About";
 import Career from "./Career";
+import Education from "./Education";
+import Certifications from "./Certifications";
 import Contact from "./Contact";
 import Cursor from "./Cursor";
+import WhatsAppWidget from "./WhatsAppWidget";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
@@ -34,6 +37,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <Cursor />
       <Navbar />
       <SocialIcons />
+      <WhatsAppWidget />
       {isDesktopView && children}
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -42,6 +46,8 @@ const MainContainer = ({ children }: PropsWithChildren) => {
             <About />
             <WhatIDo />
             <Career />
+            <Education />
+            <Certifications />
             <Work />
             {isDesktopView && (
               <Suspense fallback={<div>Loading....</div>}>

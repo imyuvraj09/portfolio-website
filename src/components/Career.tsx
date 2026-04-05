@@ -15,43 +15,49 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Participant | Gen AI for Gen Z</h4>
+                <h5>Intel Unnati</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Developed an AI Education Tutor for Remote India as part of a Team-based AI Training Program.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>AI Virtual Internship 6.0</h4>
+                <h5>Infosys Springboard</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Selected for Internship 6.0 – Batch 3, focusing on emerging tech and AI applications. Gained real-world exposure to enterprise-grade AI tools, data science practices, and software development workflows.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>AI Agent Training Intern</h4>
+                <h5>IBM</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Completed 4-week program: "From Learner to Builder – Become an AI Agent Architect". Learned foundational concepts in Agentic AI, architecture, and automation, including how autonomous agents optimize workflows.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Summer Technical Intern</h4>
+                <h5>India Space Labs</h5>
+              </div>
+              <h3>2025</h3>
+            </div>
+            <p>
+              Completed Summer Internship Technical Training Program.
             </p>
           </div>
         </div>

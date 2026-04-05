@@ -108,7 +108,7 @@
   left: 50%;
   z-index: 0;
   bottom: 50px;
-  pointer-events: inherit;
+  pointer-events: none;
 }
 .character-model::after {
   content: "";
@@ -155,10 +155,11 @@
   z-index: 3;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  pointer-events: auto;
 }
 .landing-intro {
   position: absolute;
-  z-index: 9;
+  z-index: 20;
   top: 12%;
   left: 0;
 }
@@ -189,7 +190,7 @@
   transform: translateX(50%);
   bottom: 40px;
   top: inherit;
-  z-index: 9;
+  z-index: 20;
 }
 .landing-info h3 {
   font-size: 22px;
@@ -355,4 +356,27 @@ h2.landing-info-h2 {
   h2.landing-info-h2 {
     font-size: 75px;
   }
+}
+
+.hire-me-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background-color: #d8b4fe;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  z-index: 50;
+  position: relative;
+}
+
+.hire-me-btn:hover {
+  background-color: #c084fc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(192, 132, 252, 0.4);
 }

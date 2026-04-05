@@ -1,0 +1,81 @@
+.tech-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+  padding: 20px;
+}
+
+.tech-grid-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tech-icon-box {
+  background: rgba(36, 16, 56, 0.6);
+  border: 1px solid rgba(135, 78, 255, 0.2);
+  border-radius: 14px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #d1d1d1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.02),
+              0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tech-icon-box svg {
+  font-size: 26px;
+  transition: all 0.3s ease;
+  color: #fff;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.4));
+}
+
+.tech-icon-box span {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  opacity: 0.8;
+  font-family: "Geist", sans-serif;
+}
+
+.tech-icon-box:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: rgba(56, 26, 86, 0.8);
+  border-color: rgba(251, 141, 255, 0.6);
+  box-shadow: inset 0px 4px 10px rgba(255, 255, 255, 0.05),
+              0 8px 25px rgba(251, 141, 255, 0.4),
+              0 0 10px rgba(251, 141, 255, 0.2);
+  color: #fff;
+}
+
+.tech-icon-box:hover svg {
+  filter: drop-shadow(0 0 6px rgba(251, 141, 255, 0.8));
+}
+
+.tech-icon-box:hover span {
+  opacity: 1;
+}
+
+/* Make it wrap nicely on smaller screens rather than strictly enforcing pyramid */
+@media screen and (max-width: 768px) {
+  .tech-grid-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

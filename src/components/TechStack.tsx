@@ -1,5 +1,45 @@
 import * as THREE from "three";
 import { useRef, useMemo, useState, useEffect } from "react";
+import "./styles/TechGrid.css";
+import { 
+  SiPython, SiJavascript, SiTypescript, SiC, SiCplusplus, SiKotlin, SiHtml5, SiCss3, SiGnubash, SiReact, SiNextdotjs, SiBootstrap,
+  SiNodedotjs, SiDjango, SiFlask, SiFastapi, SiTensorflow, SiPytorch, SiScikitlearn, SiOpencv, SiNumpy, SiTailwindcss,
+  SiPandas, SiMysql, SiPostgresql, SiMongodb, SiFirebase, SiRedis, SiDocker, SiMicrosoftazure,
+  SiGit, SiGithub, SiLinux, SiAmazon, SiVisualstudiocode, SiVercel,
+  SiJupyter, SiFigma, SiPostman, SiAdobephotoshop,
+  SiHuggingface, SiMicrosoft
+} from "react-icons/si";
+
+const techRows = [
+  [
+    { name: "Python", icon: SiPython }, { name: "JavaScript", icon: SiJavascript }, { name: "TypeScript", icon: SiTypescript },
+    { name: "C", icon: SiC }, { name: "C++", icon: SiCplusplus }, { name: "Kotlin", icon: SiKotlin },
+    { name: "HTML", icon: SiHtml5 }, { name: "CSS", icon: SiCss3 }, { name: "Bash", icon: SiGnubash },
+    { name: "React", icon: SiReact }, { name: "Next.js", icon: SiNextdotjs }, { name: "Bootstrap", icon: SiBootstrap }
+  ],
+  [
+    { name: "Node.js", icon: SiNodedotjs }, { name: "Django", icon: SiDjango }, { name: "Flask", icon: SiFlask },
+    { name: "FastAPI", icon: SiFastapi }, { name: "TensorFlow", icon: SiTensorflow }, { name: "PyTorch", icon: SiPytorch },
+    { name: "scikit-learn", icon: SiScikitlearn }, { name: "OpenCV", icon: SiOpencv }, { name: "NumPy", icon: SiNumpy },
+    { name: "Tailwind", icon: SiTailwindcss }
+  ],
+  [
+    { name: "Pandas", icon: SiPandas }, { name: "MySQL", icon: SiMysql }, { name: "PostgreSQL", icon: SiPostgresql },
+    { name: "MongoDB", icon: SiMongodb }, { name: "Firebase", icon: SiFirebase }, { name: "Redis", icon: SiRedis },
+    { name: "Docker", icon: SiDocker }, { name: "Azure", icon: SiMicrosoftazure }
+  ],
+  [
+    { name: "Git", icon: SiGit }, { name: "GitHub", icon: SiGithub }, { name: "Linux", icon: SiLinux },
+    { name: "AWS", icon: SiAmazon }, { name: "VS Code", icon: SiVisualstudiocode }, { name: "Vercel", icon: SiVercel }
+  ],
+  [
+    { name: "Jupyter", icon: SiJupyter }, { name: "Figma", icon: SiFigma }, { name: "Postman", icon: SiPostman },
+    { name: "Photoshop", icon: SiAdobephotoshop }
+  ],
+  [
+    { name: "Hugging Face", icon: SiHuggingface }, { name: "Office", icon: SiMicrosoft }
+  ]
+];
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
@@ -169,7 +209,21 @@ const TechStack = () => {
   return (
     <div className="techstack">
       <h2> My Techstack</h2>
-
+      <div className="tech-grid-container">
+        {techRows.map((row, rowIndex) => (
+          <div key={`row-${rowIndex}`} className="tech-grid-row">
+            {row.map((tech) => {
+              const Icon = tech.icon;
+              return (
+                <div key={tech.name} className="tech-icon-box">
+                  <Icon />
+                  <span>{tech.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        ))}
+      </div>
       <Canvas
         shadows
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
